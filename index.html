@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IB Diploma Online | Eastwood Global</title>
+<meta name="description" content="Eastwood Global is one of only 7 schools authorised by the IBO to deliver the full IB Diploma online. Live, teacher-led, and built around your child's ambition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
+<style>
+/* ===========================================================
+   EASTWOOD GLOBAL // IB DIPLOMA LANDING  — design pass v3
+   Register: eastwood.global, made more premium + less cluttered.
+   Light/paper dominant. Deep Blue #000077 reserved for the two
+   signature dark moments (By the Numbers, Start Here) + footer.
+   Apple Green #BDD100 as the single accent + all primary CTAs.
+   Bodoni Moda italic appears once, on the Khoury pull quote.
+   Logo wired: eg-logo-dark.png (light bg) / Asset 2.png (dark bg).
+   PHOTO ZONES marked ".ph" — swap in real imagery.
+   =========================================================== */
+:root{
+  --deep:#000077; --deep-2:#12128c; --deep-3:#000077;
+  --green:#BDD100; --green-deep:#6f7d00;
+  --ink:#11121a; --muted:#565866;
+  --paper:#ffffff; --white:#ffffff;
+  --line:#e9eaec; --line-2:#d8dade;
+  --mist:#f1f4f8; --mist-2:#eaeef4;
+  --rasp:#C84A75;
+  --purple:#5254BE; --sky:#059FD5; --green-hover:#a9c800;
+  --yellow:#E1B437; --forest:#006242; --moonrock:#87B5E9;
+  --maxw:1220px; --gutter:clamp(22px,5vw,76px);
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --r:18px;
+  --shadow:0 1px 2px rgba(16,18,26,.04),0 10px 26px -18px rgba(0,0,70,.16);
+  --shadow-h:0 2px 6px rgba(16,18,26,.05),0 34px 70px -30px rgba(0,0,70,.34),0 0 0 1px rgba(0,0,90,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);
+  line-height:1.62;font-size:17px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--green);color:var(--deep)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+.sec{padding-block:clamp(42px,5vw,72px)}
+.sec-tight{padding-block:clamp(34px,4vw,56px)}
+
+/* section tag / eyebrow */
+.tag{font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+  display:inline-flex;align-items:center;gap:.85em}
+.tag::before{content:"";width:34px;height:2px;background:var(--green)}
+.tag.dk{color:rgba(255,255,255,.72)}
+.tag.dk::before{background:var(--green)}
+.eb{margin-bottom:22px}
+
+/* type ramp */
+h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.05;color:var(--deep)}
+.h1{font-size:clamp(3rem,7.2vw,5.9rem);font-weight:900;letter-spacing:-.045em;line-height:.95;text-wrap:balance}
+.h2{font-size:clamp(2.1rem,4.6vw,3.6rem);letter-spacing:-.038em;line-height:1.0}
+/* Bodoni Moda italic word — the brochure's signature display device */
+.dm{font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-weight:500;letter-spacing:0;font-feature-settings:"ss01"}
+.h1 .dm,.h2 .dm{font-weight:400}
+.hl{color:var(--deep)}
+.numbers .hl,.start .hl,.hero .hl{color:var(--green)}
+/* green double-chevron marker » */
+.chev{color:var(--green);font-weight:900;font-style:normal;margin-right:.5em;letter-spacing:-.06em}
+/* green halftone dot field (decorative) */
+.htdots{position:absolute;pointer-events:none;z-index:0;
+  background-image:radial-gradient(var(--green) 1.7px,transparent 1.8px);background-size:15px 15px}
+.lede{font-size:clamp(1.1rem,1.75vw,1.4rem);line-height:1.5;color:var(--muted);font-weight:400}
+.lede.dk{color:rgba(255,255,255,.84)}
+
+/* buttons */
+/* CTAs — pill shape matching eastwood.global primary buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-weight:700;font-size:.82rem;white-space:nowrap;
+  letter-spacing:.09em;text-transform:uppercase;padding:15px 30px;min-height:48px;border-radius:26px 7px 26px 7px;cursor:pointer;border:0;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.btn .ar{transition:transform .3s var(--ease);font-size:1.15em;font-weight:600}
+.btn:hover .ar{transform:translateX(4px)}
+.btn.sentence{text-transform:none;letter-spacing:-.01em;font-size:.98rem;text-align:left;justify-content:flex-start;line-height:1.4;font-weight:700;white-space:normal;border-radius:26px 8px 26px 8px}
+.btn-p{background:var(--green);color:var(--deep)}
+.btn-p:hover{background:var(--green-hover);box-shadow:0 12px 30px -10px rgba(0,0,0,.28);transform:translateY(-2px)}
+.btn-o{background:transparent;color:var(--ink);border:1.5px solid var(--line-2)}
+.btn-o:hover{border-color:var(--deep);color:var(--deep);transform:translateY(-2px)}
+.btn-o.dk{color:#fff;border-color:rgba(255,255,255,.35)}
+.btn-o.dk:hover{border-color:var(--green);color:var(--green)}
+.btn-lg{padding:19px 40px;font-size:.86rem;min-height:56px;border-radius:30px 8px 30px 8px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:8px}
+
+/* slim scroll-progress bar — secondary-palette touch */
+.skip{position:fixed;left:14px;top:-70px;z-index:200;background:var(--green);color:var(--deep);
+  padding:11px 20px;border-radius:10px;font-weight:800;font-size:.85rem;letter-spacing:.02em;
+  box-shadow:var(--shadow-h);transition:top .3s var(--ease)}
+.skip:focus{top:14px}
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;z-index:120;
+  background:linear-gradient(90deg,var(--sky) 0%,var(--purple) 38%,var(--rasp) 68%,var(--green) 100%);
+  will-change:transform}
+@media (prefers-reduced-motion:reduce){.progress{transition:none}}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:80;background:transparent;
+  border-bottom:1px solid transparent;transition:border-color .35s,background .35s,backdrop-filter .35s}
+header.scr{border-bottom-color:rgba(255,255,255,.14);background:rgba(0,0,119,.9);backdrop-filter:blur(14px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:96px}
+/* LOGO SLOT (light bg → ink wordmark variant) */
+.logo{display:block}
+.logo img{height:58px;width:auto}
+.nav .btn{padding:12px 24px;font-size:.95rem}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden;isolation:isolate;background:var(--deep)}
+.hero-bg{position:absolute;inset:0;z-index:-2;
+  background:radial-gradient(120% 110% at 78% -10%,var(--deep-2) 0%,var(--deep) 50%,var(--deep) 100%)}
+/* HERO IMAGE SLOT */
+.hero-img{position:absolute;inset:0;z-index:-1;background-image:url('EG WEB TEMP 2.png');
+  background-size:auto 100%;background-repeat:no-repeat;background-position:right -120px bottom;opacity:1}
+/* left scrim keeps headline legible over the photo */
+.hero-scrim{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(100deg,var(--deep) 0%,var(--deep) 34%,rgba(0,0,119,.86) 50%,rgba(0,0,119,.32) 68%,rgba(0,0,119,0) 84%)}
+.hero-grid{position:absolute;inset:0;z-index:-1;opacity:.4;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:78px 78px;mask-image:radial-gradient(115% 95% at 78% 0%,#000 26%,transparent 74%)}
+.hero .wrap{position:relative;padding-block:clamp(96px,9vw,124px) clamp(56px,6vw,80px)}
+.kicker{display:inline-flex;align-items:center;gap:.85em;font-size:12.5px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:34px;flex-wrap:wrap}
+.kicker .frac{background:var(--green);color:var(--deep);font-weight:800;letter-spacing:.03em;
+  font-size:.9em;padding:6px 12px;border-radius:100px;white-space:nowrap}
+.kicker .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.4)}
+.hero h1{max-width:16ch;margin-bottom:30px;color:#fff}
+.hero .lede{max-width:52ch;margin-bottom:46px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.hstats{display:grid;grid-template-columns:repeat(3,auto);gap:clamp(34px,5vw,84px);
+  margin-top:72px;width:fit-content}
+.hstat{padding-top:22px;border-top:2px solid var(--green)}
+.hstat .n{font-size:clamp(2.5rem,4.6vw,3.6rem);font-weight:900;letter-spacing:-.04em;line-height:1;color:#fff}
+.hstat .l{font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:14px}
+
+/* trust bar — premium proof strip, animated */
+.trust{background:var(--white);border-top:2px solid var(--green);border-bottom:1px solid var(--line);overflow:hidden}
+.trust .wrap{display:grid;grid-template-columns:repeat(5,1fr);padding-inline:0}
+.tcell{position:relative;padding:clamp(42px,4.2vw,66px) clamp(16px,1.8vw,30px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;text-align:center;
+  min-height:clamp(168px,18vw,224px)}
+.tcell + .tcell::before{content:"";position:absolute;left:0;top:clamp(28px,3vw,44px);bottom:clamp(28px,3vw,44px);
+  width:1px;background:var(--line)}
+.tcell .big{font-size:clamp(2.4rem,3.4vw,3.6rem);font-weight:900;letter-spacing:-.05em;line-height:1;
+  color:var(--deep);font-variant-numeric:tabular-nums}
+.tcell .big.word{font-size:clamp(1.6rem,2.2vw,2.3rem);letter-spacing:-.035em}
+.tcell .big .u{color:var(--green);font-weight:900}
+.tcell .kick{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);line-height:1.35}
+.tcell .lab{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);line-height:1.4;max-width:15ch;text-wrap:balance}
+/* entrance: staggered rise + settle */
+.tcell{opacity:0;transform:translateY(16px)}
+.trust.lit .tcell{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.trust.lit .tcell:nth-child(1){transition-delay:0ms}
+.trust.lit .tcell:nth-child(2){transition-delay:90ms}
+.trust.lit .tcell:nth-child(3){transition-delay:180ms}
+.trust.lit .tcell:nth-child(4){transition-delay:270ms}
+.trust.lit .tcell:nth-child(5){transition-delay:360ms}
+@media (prefers-reduced-motion:reduce){.tcell{opacity:1;transform:none}}
+
+/* webinar promo band — additive, secondary CTA (below hero) */
+.webinar{background:var(--deep);color:#fff;border-top:2px solid var(--green)}
+.webinar .wrap{display:flex;align-items:center;justify-content:space-between;gap:clamp(22px,4vw,64px);
+  padding-block:clamp(26px,3vw,40px);flex-wrap:wrap}
+.webinar .wtext{max-width:74ch}
+.webinar .web{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);
+  display:inline-flex;align-items:center;gap:.85em;margin-bottom:12px}
+.webinar .web::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 0 0 rgba(189,209,0,.55);animation:wpulse 2.6s var(--ease) infinite}
+@keyframes wpulse{0%{box-shadow:0 0 0 0 rgba(189,209,0,.5)}70%{box-shadow:0 0 0 9px rgba(189,209,0,0)}100%{box-shadow:0 0 0 0 rgba(189,209,0,0)}}
+.webinar .wh{font-size:clamp(1.2rem,2vw,1.62rem);font-weight:800;letter-spacing:-.028em;line-height:1.2;color:#fff;max-width:36ch}
+.webinar .wsub{font-size:.98rem;color:rgba(255,255,255,.72);margin-top:9px}
+.webinar .wcta{flex:0 0 auto}
+.webinar .btn-p{padding:14px 26px}
+@media (prefers-reduced-motion:reduce){.webinar .web::before{animation:none}}
+@media (max-width:640px){.webinar .wcta{width:100%}.webinar .wcta .btn{width:100%;justify-content:center}}
+
+/* full-bleed editorial photo band */
+.band{position:relative;height:clamp(280px,34vw,460px);background:var(--deep-3);overflow:hidden}
+.band .ph{position:absolute;inset:0}
+/* deep-blue brand wash — consistent with the hero treatment */
+.band::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(0,0,119,0) 55%,rgba(0,0,119,.55) 100%),
+    linear-gradient(100deg,rgba(0,0,119,.55) 0%,rgba(0,0,119,.18) 34%,rgba(0,0,119,0) 60%)}
+.band .lbl{position:absolute;left:var(--gutter);bottom:30px;z-index:2;
+  font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.86);
+  display:inline-flex;align-items:center;gap:.85em}
+.band .lbl::before{content:"";width:34px;height:2px;background:var(--green)}
+
+/* photo placeholder styling (visible until swapped) */
+.ph{background:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px),
+    linear-gradient(160deg,var(--deep) 0%,var(--deep-3) 100%);
+  display:grid;place-items:center;color:rgba(255,255,255,.5);text-align:center;padding:24px}
+.ph .pt{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;line-height:1.75;max-width:34ch;font-family:ui-monospace,'SFMono-Regular',Menlo,monospace}
+.ph .pt b{color:var(--green);font-weight:700}
+
+/* section head */
+.shead{max-width:60ch}
+.shead .lede{margin-top:20px}
+
+/* FAQ — awwwards-tier cards: ghost numeral, accent bar, glow lift */
+.faqs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.4vw,20px);margin-top:clamp(28px,3vw,40px)}
+.faq{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(30px,3vw,44px);overflow:hidden;isolation:isolate;box-shadow:var(--shadow);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease)}
+.faq::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green);
+  transform:scaleY(0);transform-origin:top;transition:transform .55s var(--ease);z-index:2}
+/* ghost numeral watermark */
+.faq::after{content:attr(data-n);position:absolute;right:-.12em;top:-.28em;z-index:0;pointer-events:none;
+  font-size:clamp(6rem,11vw,10rem);font-weight:900;letter-spacing:-.06em;line-height:1;
+  color:var(--deep);opacity:.04;font-variant-numeric:tabular-nums;transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.faq:hover{transform:translateY(-6px);box-shadow:var(--shadow-h);border-color:transparent}
+.faq:hover::before{transform:scaleY(1)}
+.faq:hover::after{opacity:.07;transform:translate(-6px,4px)}
+.faq>*{position:relative;z-index:1}
+.faq .num{font-size:.76rem;font-weight:800;letter-spacing:.16em;color:var(--deep);
+  display:block;margin-bottom:18px;font-variant-numeric:tabular-nums}
+.faq:nth-child(1) .num{color:var(--sky)}
+.faq:nth-child(2) .num{color:var(--purple)}
+.faq:nth-child(3) .num{color:var(--rasp)}
+.faq:nth-child(4) .num{color:var(--forest)}
+.faq:nth-child(5) .num{color:var(--yellow)}
+.faq:nth-child(6) .num{color:var(--sky)}
+.faq h3{font-size:clamp(1.16rem,1.5vw,1.34rem);font-weight:700;letter-spacing:-.022em;line-height:1.3;
+  color:var(--deep);margin-bottom:14px;text-wrap:balance}
+.faq p{font-size:1rem;color:var(--muted);line-height:1.66;max-width:46ch}
+
+/* numbers band (signature) */
+.numbers{color:#fff;background:linear-gradient(155deg,var(--deep-2) 0%,var(--deep) 100%)}
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(255,255,255,.16);border-left:1px solid rgba(255,255,255,.16);
+  border-radius:0;overflow:hidden;margin-top:40px}
+.nc{border-right:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16);
+  padding:clamp(32px,3.8vw,54px);transition:background .3s}
+.nc:hover{background:rgba(255,255,255,.03)}
+.nc .n{font-size:clamp(2.9rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.05em;line-height:.9;color:var(--green);font-variant-numeric:tabular-nums}
+.nc .n .s{font-size:.42em;font-weight:800;color:#fff;letter-spacing:-.02em}
+.nc .lab{font-size:1.04rem;font-weight:700;color:#fff;margin-top:20px;letter-spacing:-.012em}
+.nc .sub{font-size:.86rem;color:rgba(255,255,255,.58);margin-top:7px}
+/* the anchor proof — inverted cell */
+.nc.anchor{background:var(--green)}
+.nc.anchor:hover{background:var(--green)}
+.nc.anchor .n{color:var(--deep)}
+.nc.anchor .n .s{color:var(--deep)}
+.nc.anchor .lab{color:var(--deep)}
+.nc.anchor .sub{color:rgba(0,0,80,.66)}
+.num-cta{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:38px}
+.num-cta p{color:rgba(255,255,255,.82);font-size:1.08rem}
+
+/* why */
+.whyhead{display:block;max-width:none}
+.whead-in{max-width:60ch}
+.band-why{margin-block:clamp(30px,4vw,52px)}
+.why-list{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,1.6vw,22px)}
+.why:nth-child(5){grid-column:1/-1}
+@media (max-width:760px){.why-list{grid-template-columns:1fr}.why:nth-child(5){grid-column:auto}}
+.why{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(30px,3vw,42px);position:relative;overflow:hidden;isolation:isolate;box-shadow:var(--shadow);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease)}
+.why::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green);
+  transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease);z-index:2}
+.why::after{content:attr(data-idx);position:absolute;right:.04em;bottom:-.34em;z-index:0;pointer-events:none;
+  font-size:clamp(6rem,10vw,9rem);font-weight:900;letter-spacing:-.06em;line-height:1;
+  color:var(--deep);opacity:.05;font-variant-numeric:tabular-nums;transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.why:hover{transform:translateY(-6px);box-shadow:var(--shadow-h);border-color:transparent}
+.why:hover::before{transform:scaleY(1)}
+.why:hover::after{opacity:.09;transform:translateY(-4px)}
+.why>*{position:relative;z-index:1}
+.why:nth-child(1)::before{background:var(--green)}
+.why:nth-child(2)::before{background:var(--sky)}
+.why:nth-child(3)::before{background:var(--purple)}
+.why:nth-child(4)::before{background:var(--rasp)}
+.why:nth-child(5)::before{background:var(--green)}
+.why .idx{font-size:.82rem;font-weight:800;letter-spacing:.1em;color:var(--deep);font-variant-numeric:tabular-nums;display:block;margin-bottom:18px}
+.why h3{font-size:clamp(1.2rem,1.8vw,1.5rem);letter-spacing:-.028em;margin-bottom:12px}
+.why h3::before{content:"\00BB";color:var(--green);font-weight:900;margin-right:.45em;letter-spacing:-.05em}
+.why:nth-child(2) h3::before{color:var(--sky)}
+.why:nth-child(3) h3::before{color:var(--purple)}
+.why:nth-child(4) h3::before{color:var(--rasp)}
+.why p{color:var(--muted);font-size:1.02rem}
+
+/* pull quote — white, brochure "About / Welcome" styling */
+.quote{background:var(--white);color:var(--deep);overflow:hidden;position:relative;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quote .qmap{position:absolute;inset:0;z-index:0;background-image:url('map-4741ff13.png');
+  background-repeat:no-repeat;background-position:center 42%;background-size:min(94%,1120px);
+  opacity:.26;pointer-events:none}
+.quote .wrap{position:relative;z-index:1;padding-block:clamp(72px,9vw,124px);
+  display:grid;grid-template-columns:1.55fr .45fr;gap:clamp(20px,5vw,52px);align-items:center;
+  min-height:clamp(470px,52vw,600px)}
+.quote .qtext{position:relative}
+.quote .qtext::before{content:"\201C";font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-weight:600;
+  font-size:clamp(4.5rem,9vw,7rem);line-height:.68;color:var(--green);display:block;margin-bottom:.1em}
+.quote blockquote{font-family:'Inter',sans-serif;font-weight:800;font-style:normal;
+  font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1.16;letter-spacing:-.03em;max-width:24ch;color:var(--deep)}
+.quote .cite{margin-top:34px;font-weight:800;font-size:1.06rem;letter-spacing:-.012em;color:var(--deep)}
+.quote .cite span{display:block;font-weight:500;font-style:italic;color:var(--muted);font-size:.94rem;margin-top:4px}
+.quote .qfig{position:absolute;right:0;bottom:0;z-index:1;height:100%;
+  display:flex;align-items:flex-end;justify-content:flex-end;pointer-events:none}
+.quote .qfig img{display:block;height:100%;width:auto;max-width:none;object-fit:contain;object-position:bottom right;filter:none}
+@media (max-width:820px){
+  .quote .wrap{grid-template-columns:1fr;min-height:0;padding-bottom:clamp(300px,74vw,440px)}
+  .quote .qfig{height:auto;right:-6%}
+  .quote .qfig img{height:clamp(290px,72vw,430px)}
+}
+
+/* curriculum */
+.curhead{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:end}
+.core-note{font-size:1.02rem;color:var(--muted);max-width:44ch}
+.groups{margin-top:40px;border-top:1px solid var(--line)}
+.grp{border-bottom:1px solid var(--line)}
+.grp summary{list-style:none;cursor:pointer;padding:28px 4px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.grp summary::-webkit-details-marker{display:none}
+.grp .gt{font-size:clamp(1.08rem,1.9vw,1.42rem);font-weight:700;letter-spacing:-.02em;color:var(--deep);
+  display:inline-flex;align-items:center;gap:.7em}
+.grp .gt::before{content:"";width:10px;height:10px;border-radius:3px;flex:0 0 auto;background:var(--green);
+  transition:transform .35s var(--ease)}
+.grp:hover .gt::before{transform:scale(1.35)}
+.groups .grp:nth-child(1) .gt::before{background:var(--sky)}
+.groups .grp:nth-child(2) .gt::before{background:var(--yellow)}
+.groups .grp:nth-child(3) .gt::before{background:var(--purple)}
+.groups .grp:nth-child(4) .gt::before{background:var(--forest)}
+.groups .grp:nth-child(5) .gt::before{background:var(--rasp)}
+.groups .grp:nth-child(6) .gt::before{background:var(--moonrock)}
+.groups .grp:nth-child(7) .gt::before{background:var(--green)}
+.grp .gt em{font-style:normal;color:var(--deep);font-weight:800;font-size:.68em;
+  letter-spacing:.08em;text-transform:uppercase;margin-left:.75em}
+.grp .pl{width:34px;height:34px;flex:0 0 auto;border:1.5px solid var(--line-2);border-radius:50%;position:relative;transition:.3s var(--ease)}
+.grp .pl::before,.grp .pl::after{content:"";position:absolute;background:var(--deep);left:50%;top:50%;transform:translate(-50%,-50%);transition:.3s var(--ease)}
+.grp .pl::before{width:13px;height:1.8px}
+.grp .pl::after{width:1.8px;height:13px}
+.grp[open] .pl{background:var(--deep);border-color:var(--deep);transform:rotate(90deg)}
+.grp[open] .pl::before,.grp[open] .pl::after{background:var(--green)}
+.grp[open] .pl::after{transform:translate(-50%,-50%) scaleY(0)}
+.grp .body{padding:0 4px 30px;color:var(--muted);font-size:1.04rem;line-height:1.8;max-width:80ch}
+.grp[open] .body{animation:accIn .42s var(--ease)}
+@keyframes accIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* scheduling */
+.sched{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+
+/* ===== interactive world-clock map ===== */
+.wclock{position:relative;margin-top:40px;border-radius:26px;overflow:hidden;
+  background:linear-gradient(160deg,var(--deep-2) 0%,var(--deep) 60%,var(--deep-3) 100%);
+  color:#fff;box-shadow:var(--shadow-h);isolation:isolate}
+.wc-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px 32px;
+  padding:clamp(24px,3vw,38px) clamp(24px,3.4vw,44px) 0}
+.wc-swiss{display:flex;align-items:baseline;gap:16px}
+.wc-swiss .lbl{font-size:.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.wc-swiss .clk{font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:900;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;line-height:1}
+.wc-swiss .clk .sec{color:var(--green)}
+.wc-swiss .place{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.66)}
+.wc-status{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;
+  letter-spacing:.02em;padding:9px 16px;border-radius:100px;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14)}
+.wc-status .live{width:9px;height:9px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 0 0 rgba(189,209,0,.6);animation:wpulse 2.4s var(--ease) infinite}
+.wc-status.off .live{background:rgba(255,255,255,.4);animation:none}
+.wc-toggle{display:inline-flex;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:100px;padding:4px}
+.wc-toggle button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.7);cursor:pointer;
+  font-family:inherit;font-size:.76rem;font-weight:700;letter-spacing:.04em;padding:9px 18px;border-radius:100px;
+  transition:color .35s var(--ease),background .35s var(--ease)}
+.wc-toggle button.on{background:var(--green);color:var(--deep)}
+.wc-map{position:relative;margin:clamp(14px,2vw,24px) clamp(16px,2vw,30px) clamp(20px,2.4vw,32px);
+  aspect-ratio:1.7/1}
+.wc-mapimg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:.42;
+  transition:opacity .5s var(--ease);filter:saturate(.9)}
+.wclock.ready .wc-mapimg{opacity:.5}
+.wc-arc{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:1}
+.wc-arc path{fill:none;stroke:var(--green);stroke-width:1.5;opacity:0;vector-effect:non-scaling-stroke;
+  stroke-linecap:round;stroke-dasharray:1 7;transition:opacity .5s var(--ease)}
+.wc-arc path.show{opacity:.55;animation:dash 26s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-320}}
+.mk{position:absolute;transform:translate(-50%,-50%);z-index:2;cursor:default}
+.mk .dot{position:relative;width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.5);
+  margin:0 auto;transition:background .4s var(--ease),transform .4s var(--ease),box-shadow .4s var(--ease)}
+.mk .dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid transparent;
+  transition:border-color .4s var(--ease)}
+.mk.hub .dot{background:var(--green);width:14px;height:14px;box-shadow:0 0 0 0 rgba(189,209,0,.55);animation:wpulse 2.4s var(--ease) infinite}
+.mk.active .dot{background:var(--green);transform:scale(1.1);box-shadow:0 0 14px 2px rgba(189,209,0,.55);
+  animation:wpulse 2.6s var(--ease) infinite}
+.mk.active .dot::after{border-color:rgba(189,209,0,.4)}
+.mk .chip{position:absolute;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%) translateY(4px);
+  white-space:nowrap;background:rgba(0,0,50,.72);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.16);border-radius:9px;padding:6px 10px;text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .4s var(--ease),transform .4s var(--ease),border-color .4s var(--ease),background .4s var(--ease)}
+.mk .chip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:rgba(0,0,50,.72)}
+.mk .chip .city{display:block;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.mk .chip .time{display:block;font-size:.82rem;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em;margin-top:1px}
+.mk.active .chip,.mk.hub .chip,.mk:hover .chip{opacity:1;transform:translateX(-50%) translateY(-3px);
+  border-color:rgba(189,209,0,.5);background:rgba(0,0,60,.92);z-index:5;pointer-events:auto}
+.mk.active .chip{opacity:0}
+.mk.active:hover .chip,.mk.hub .chip{opacity:1}
+.mk.active .chip .time,.mk.hub .chip .time{color:var(--green)}
+.mk.dim{opacity:.42;transition:opacity .5s var(--ease)}
+.mk.dim .dot{width:7px;height:7px}
+.wc-foot{display:flex;flex-wrap:wrap;gap:8px 20px;padding:0 clamp(24px,3.4vw,44px) clamp(22px,2.6vw,32px);
+  font-size:.8rem;color:rgba(255,255,255,.6)}
+.wc-foot b{color:var(--green);font-weight:800}
+.scard.onair{border-color:transparent;box-shadow:var(--shadow-h),0 0 0 2px var(--green)}
+.scard .onair-pill{display:none;align-items:center;gap:7px;margin-top:16px;font-size:.72rem;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--green-deep)}
+.scard .onair-pill .live{width:8px;height:8px;border-radius:50%;background:var(--green);animation:wpulse 2.4s var(--ease) infinite}
+.scard.onair .onair-pill{display:inline-flex}
+@media (max-width:680px){
+  .wc-top{flex-direction:column;align-items:flex-start;gap:16px}
+  .wc-map{aspect-ratio:1.35/1}
+  .mk .chip{padding:4px 7px}
+  .mk .chip .city{font-size:.54rem}
+  .mk .chip .time{font-size:.72rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .wc-status .live,.mk.hub .dot,.mk.active .dot{animation:none}
+  .wc-arc path.show{animation:none}
+}
+
+.scard{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:clamp(32px,3.8vw,52px);overflow:hidden;isolation:isolate;box-shadow:var(--shadow);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease)}
+.scard::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;z-index:0;pointer-events:none;
+  background:radial-gradient(circle,var(--green) 0%,transparent 70%);opacity:0;transition:opacity .5s var(--ease)}
+.scard:hover{transform:translateY(-6px);box-shadow:var(--shadow-h);border-color:transparent}
+.scard:hover::after{opacity:.14}
+.scard>*{position:relative;z-index:1}
+.scard .k{font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--deep)}
+.scard .t{font-size:clamp(1.7rem,2.9vw,2.3rem);font-weight:900;letter-spacing:-.04em;margin:18px 0 6px;color:var(--deep)}
+.scard .z{font-size:.92rem;font-weight:700;color:var(--deep);margin-bottom:20px}
+.scard p{color:var(--muted);font-size:1.02rem}
+
+/* admissions steps — awwwards-tier cards */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(14px,1.4vw,18px);margin-top:40px}
+.step{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(26px,2.4vw,34px) clamp(20px,1.8vw,26px);overflow:hidden;isolation:isolate;box-shadow:var(--shadow);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease)}
+.step::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--green);
+  transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease);z-index:2}
+.steps .step:nth-child(1)::before{background:var(--sky)}
+.steps .step:nth-child(2)::before{background:var(--yellow)}
+.steps .step:nth-child(3)::before{background:var(--purple)}
+.steps .step:nth-child(4)::before{background:var(--rasp)}
+.steps .step:nth-child(5)::before{background:var(--green)}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow-h);border-color:transparent}
+.step:hover::before{transform:scaleX(1)}
+.step>*{position:relative;z-index:1}
+.step .sn{width:46px;height:46px;border-radius:13px;background:var(--deep);color:#fff;
+  display:grid;place-items:center;font-weight:900;font-size:1.1rem;margin-bottom:22px;
+  transition:transform .5s var(--ease)}
+.steps .step:nth-child(1) .sn{background:var(--sky)}
+.steps .step:nth-child(2) .sn{background:var(--yellow);color:var(--deep)}
+.steps .step:nth-child(3) .sn{background:var(--purple)}
+.steps .step:nth-child(4) .sn{background:var(--rasp)}
+.steps .step:nth-child(5) .sn{background:var(--green);color:var(--deep)}
+.step:hover .sn{transform:scale(1.1) rotate(-5deg)}
+.step:hover .sn{transform:scale(1.08)}
+.step h3{font-size:1.1rem;letter-spacing:-.02em;margin-bottom:11px}
+.step p{font-size:.9rem;color:var(--muted);line-height:1.52}
+
+/* start here — full-bleed earth image */
+.start{position:relative;overflow:hidden;color:#fff;
+  background:var(--deep) url('earth-cover-16x9.png') center/cover no-repeat}
+.start::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(95deg,rgba(0,0,60,.9) 0%,rgba(0,0,80,.72) 34%,rgba(0,0,80,.28) 60%,rgba(0,0,80,.12) 100%),
+    linear-gradient(0deg,rgba(0,0,50,.55) 0%,rgba(0,0,50,0) 45%)}
+.start .wrap{position:relative;z-index:1}
+.start .grid{max-width:620px}
+.start h2{margin-bottom:24px}
+.start .lede{margin-bottom:36px}
+.contact{display:flex;flex-wrap:wrap;gap:14px 34px;font-size:1.06rem;font-weight:700;margin-bottom:36px}
+.contact a{display:inline-flex;align-items:center;gap:.5em;color:#fff}
+.contact a:hover{color:var(--green)}
+
+/* footer — eastwood.global style: columns + enquire button */
+footer{background:var(--deep-3);color:#fff;border-radius:34px 34px 0 0;margin-top:-24px;position:relative;z-index:2}
+footer .wrap{padding-block:clamp(56px,6vw,88px)}
+.ftop{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:clamp(30px,5vw,64px);align-items:start}
+/* LOGO SLOT (dark bg → white/reversed variant) */
+.logo.rev img{height:62px;width:auto}
+.fcol h3{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.fcol{display:flex;flex-direction:column;gap:10px;font-size:.96rem;line-height:1.5}
+.fcol a,.fcol .fline{color:rgba(255,255,255,.82)}
+.fcol a:hover{color:var(--green)}
+.fenq{align-self:start}
+.fmeta{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:clamp(44px,5vw,64px);padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.16);font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.6}
+.fmeta a{color:rgba(255,255,255,.72);text-decoration:underline;text-underline-offset:3px}
+.fmeta a:hover{color:var(--green)}
+@media (max-width:820px){.ftop{grid-template-columns:1fr 1fr}.logo.rev{grid-column:1/-1}.fenq{grid-column:1/-1}}
+@media (max-width:520px){.ftop{grid-template-columns:1fr}}
+
+/* motion — 2026 pass: soft rise, blur-settle, image clip-reveals */
+.rv{opacity:0;transform:translateY(26px);filter:blur(6px);
+  transition:opacity .85s var(--ease),transform .85s var(--ease),filter .85s var(--ease);will-change:opacity,transform}
+.rv.in{opacity:1;transform:none;filter:none}
+.hero .rv{transition-duration:.95s}
+/* image bands: clip-path wipe reveal */
+.band.rv{opacity:0;clip-path:inset(0 12% 0 12%);transform:none;filter:none;
+  transition:opacity .9s var(--ease),clip-path 1.05s var(--ease)}
+.band.rv.in{opacity:1;clip-path:inset(0 0 0 0)}
+/* Michel portrait: fade in, stays anchored bottom-right */
+.quote .qfig{opacity:0;transition:opacity 1s var(--ease)}
+.quote .wrap.in .qfig{opacity:1}
+/* card cascade */
+.stagger>.rv:nth-child(2){transition-delay:.07s}
+.stagger>.rv:nth-child(3){transition-delay:.14s}
+.stagger>.rv:nth-child(4){transition-delay:.21s}
+.stagger>.rv:nth-child(5){transition-delay:.28s}
+.stagger>.rv:nth-child(6){transition-delay:.35s}
+@media (prefers-reduced-motion:reduce){.stagger>.rv{transition-delay:0s!important}}
+@media (prefers-reduced-motion:reduce){.rv,.band.rv,.quote .qfig{opacity:1;transform:none;filter:none;clip-path:none;transition:none}.quote .wrap.in .qfig img{animation:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:900px){
+  .faqs{grid-template-columns:1fr}
+  .ngrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .start .grid{grid-template-columns:1fr}
+  .sched{grid-template-columns:1fr}
+  .whyhead .ph{aspect-ratio:16/9;order:-1}
+  .curhead{grid-template-columns:1fr}
+  .step + .step::before{display:none}
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .tcell{min-height:auto;padding:30px 22px;border-top:1px solid var(--line)}
+  .tcell + .tcell::before{display:none}
+  .tcell:nth-child(odd)::after{content:"";position:absolute;right:0;top:22px;bottom:22px;width:1px;background:var(--line)}
+  .tcell.loc{grid-column:1/-1}
+  .tcell.loc:nth-child(odd)::after{display:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .hstats{grid-template-columns:1fr 1fr;gap:26px 40px}
+  .ngrid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr;gap:8px}
+  .nav .btn .tx{display:none}
+  .nav{height:70px}
+  .logo img{height:42px}
+  .faq p{padding-left:0}
+  .trust .wrap{grid-template-columns:1fr}
+  .tcell:nth-child(odd)::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail" data-bg-color="#000077">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#000077"/>
+    <g transform="translate(600 400)">
+      <path d="M -150 -150 L 30 -150 L 30 -110 L -110 -110 L -110 150 L 30 150 L 30 190 L -150 190 Z" fill="#BDD100"/>
+      <rect x="70" y="-150" width="180" height="40" fill="#BDD100"/>
+      <rect x="70" y="-60" width="180" height="40" fill="#BDD100"/>
+      <rect x="70" y="30" width="180" height="40" fill="#BDD100"/>
+    </g>
+  </svg>
+</template>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip" href="#faq">Skip to content</a>
+
+<!-- ===== HEADER ===== -->
+<header id="hdr">
+  <div class="wrap nav">
+    <!-- LOGO SLOT (light bg) — official landscape lockup, ink variant -->
+    <a class="logo" href="https://www.eastwood.global" aria-label="Eastwood Global Online School">
+      <img src="Asset 2-8c3921e6.png" alt="Eastwood Global Online School" width="176" height="58">
+    </a>
+    <a class="btn btn-p" href="https://www.eastwood.global/enquire-now-form"><span class="tx">Book a Free Call</span> <span class="ar">&rarr;</span></a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-img" id="heroImg"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <span class="kicker rv"><span class="frac">1&nbsp;of&nbsp;7</span> Schools Worldwide <span class="dot"></span> IB Diploma Online</span>
+    <h1 class="h1 rv">Your Child&rsquo;s Path<br>to&nbsp;the <span class="dm">World&rsquo;s</span> Top&nbsp;Universities.</h1>
+    <p class="lede dk rv">Eastwood Global is one of only 7 schools authorised by the IBO to deliver the full IB Diploma online. Live, teacher-led, and built around your child&rsquo;s ambition.</p>
+    <div class="hero-cta rv">
+      <a class="btn btn-p btn-lg" href="https://www.eastwood.global/enquire-now-form">Book a Free Admissions Call <span class="ar">&rarr;</span></a>
+    </div>
+    <div class="hstats rv">
+      <div class="hstat"><div class="n">38.9</div><div class="l">Avg IB Score</div></div>
+      <div class="hstat"><div class="n">100%</div><div class="l">Pass Rate</div></div>
+      <div class="hstat"><div class="n">35+</div><div class="l">Countries</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WEBINAR PROMO BAND (additive, secondary) ===== -->
+<section class="webinar" aria-label="Free live webinar">
+  <div class="wrap">
+    <div class="wtext">
+      <span class="web">Free Live Webinar</span>
+      <div class="wh">What Top Universities Really Look For,<br>and How the IB Builds It Before Grade 11</div>
+      <p class="wsub">Register now and we&rsquo;ll send you the date and your joining link.</p>
+    </div>
+    <div class="wcta">
+      <!-- TYPEFORM LINK SLOT -->
+      <a class="btn btn-p" href="https://form.typeform.com/to/z8G6hwZ0?utm_source=landing_page&amp;utm_medium=web&amp;utm_campaign=ib_webinar&amp;utm_content=webinar_band" target="_blank" rel="noopener">Reserve your seat</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust" id="trust">
+  <div class="wrap">
+    <div class="tcell"><span class="big">IBO</span><span class="lab">Authorised School</span></div>
+    <div class="tcell"><span class="kick">Students from</span><span class="big"><span class="ct" data-to="35">35</span><span class="u">+</span></span><span class="lab">Countries</span></div>
+    <div class="tcell"><span class="big"><span class="ct" data-to="113">113</span></span><span class="lab">Diplomas Awarded</span></div>
+    <div class="tcell"><span class="kick">Perfect Scores of</span><span class="big"><span class="ct" data-to="45">45</span><span class="u">/45</span></span></div>
+    <div class="tcell"><span class="kick">Anchored in</span><span class="big word">Montreux,</span><span class="lab">Switzerland</span></div>
+  </div>
+</div>
+
+<!-- ===== EDITORIAL PHOTO BAND ===== -->
+<div class="band rv">
+  <div class="ph" style="background-image:url('EG-STUDENT-V2.png');background-size:cover;background-position:center 28%"></div>
+  <div class="lbl">Eastwood Global // Live, Every Day</div>
+</div>
+
+<!-- ===== WHAT PARENTS ASK ===== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="tag eb">Eastwood Global // What Parents Ask</span>
+      <h2 class="h2">What Parents Ask <span class="dm">First</span></h2>
+      <p class="lede">Six questions every family asks. Answered honestly.</p>
+    </div>
+    <div class="faqs stagger">
+      <div class="faq rv" data-n="1"><span class="num">01</span><h3>Is an online IB actually as rigorous as a physical school?</h3>
+        <p>Yes, and the results prove it. Our average IB score is 38.9, well above the global average of 31.74, with a 100% diploma success rate. Every class is live and teacher-led, not pre-recorded.</p></div>
+      <div class="faq rv" data-n="2"><span class="num">02</span><h3>Will the IB Diploma be recognised by top universities?</h3>
+        <p>The IB Diploma is widely recognised by universities and higher education institutions around the world. Our graduates are equipped for academic and career opportunities, prepared to succeed in university and beyond.</p></div>
+      <div class="faq rv" data-n="3"><span class="num">03</span><h3>My child has a busy schedule: sport, travel, life. Can this work?</h3>
+        <p>That&rsquo;s exactly who we&rsquo;re built for. Two global timetables, morning and afternoon Swiss time, give families the flexibility to plan around training, competitions, and time zones without sacrificing academic rigour.</p></div>
+      <div class="faq rv" data-n="4"><span class="num">04</span><h3>Can my child join mid-year, or start from Grade 10?</h3>
+        <p>We offer rolling admissions with entry in Semester 1 and Semester 2. Students in Grade 10 can enrol ahead of the DP to ensure a seamless transition into the full IB Diploma Programme.</p></div>
+      <div class="faq rv" data-n="5"><span class="num">05</span><h3>What does a real school community look like online?</h3>
+        <p>Live, interactive classes led by expert IB educators. Through dynamic discussions, immediate feedback, and interactive group work, students develop the critical thinking and collaboration skills needed to thrive in the IB and beyond.</p></div>
+      <div class="faq rv" data-n="6"><span class="num">06</span><h3>What support is there for university applications?</h3>
+        <p>University preparation is built into the programme from day one. Subject selection, the Extended Essay (EE), and CAS activities are all guided with long-term university fit in mind, not left to the final year.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BY THE NUMBERS (signature) ===== -->
+<section class="sec numbers" id="numbers">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="tag dk eb">Eastwood Global // By the Numbers</span>
+      <h2 class="h2" style="color:#fff">Academic results that<br>speak for <span class="dm">themselves.</span></h2>
+    </div>
+    <div class="ngrid stagger">
+      <div class="nc rv"><div class="n"><span class="ct" data-to="38.9" data-dec="1">38.9</span></div><div class="lab">Average IB Score</div><div class="sub">Global avg: 31.74</div></div>
+      <div class="nc rv"><div class="n"><span class="ct" data-to="100">100</span><span class="s">%</span></div><div class="lab">Diploma Success Rate</div><div class="sub">Every student, every year</div></div>
+      <div class="nc rv"><div class="n"><span class="ct" data-to="45">45</span><span class="s">/45</span></div><div class="lab">Perfect IB Scores</div><div class="sub">Multiple students achieved</div></div>
+      <div class="nc anchor rv"><div class="n">1<span class="s"> of 7</span></div><div class="lab">Schools Worldwide</div><div class="sub">Authorised for IB Diploma online</div></div>
+      <div class="nc rv"><div class="n"><span class="ct" data-to="113">113</span></div><div class="lab">Diplomas Awarded</div><div class="sub">113 of 113, every candidate</div></div>
+      <div class="nc rv"><div class="n"><span class="ct" data-to="35">35</span><span class="s">+</span></div><div class="lab">Nationalities</div><div class="sub">In our student body</div></div>
+    </div>
+    <div class="num-cta rv">
+      <p>Speak with our admissions team. No commitment, just answers.</p>
+      <a class="btn btn-p" href="https://www.eastwood.global/enquire-now-form">Book a Free Call <span class="ar">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY EASTWOOD GLOBAL ===== -->
+<section class="sec" id="why" style="background:var(--white)">
+  <div class="wrap">
+    <div class="whyhead rv">
+      <div class="shead whead-in">
+        <span class="tag eb">Eastwood Global // Why Us</span>
+        <h2 class="h2">Why <span class="dm">Eastwood</span> Global</h2>
+        <p class="lede">What makes this different from every other online school.</p>
+      </div>
+    </div>
+  </div>
+  <div class="band band-why rv" role="img" aria-label="Eastwood Global student athlete competing">
+    <div class="ph" style="background-image:url('EG-ATHLETE.png');background-size:cover;background-position:center 30%"></div>
+    <div class="lbl">Eastwood Global // Built Around Ambition</div>
+  </div>
+  <div class="wrap">
+    <div class="why-list stagger">
+      <div class="why rv" data-idx="01"><div class="idx">01</div><div>
+        <h3>Every class is live</h3>
+        <p>Every teacher is an expert IB educator. No pre-recorded lectures. Students engage in deep, meaningful learning through dynamic discussions, immediate feedback, and interactive group work in real time.</p></div></div>
+      <div class="why rv" data-idx="02"><div class="idx">02</div><div>
+        <h3>Flexibility without compromising rigour</h3>
+        <p>Morning and afternoon Swiss timetables accommodate students across Europe, the Middle East, Asia, and beyond, without ever cutting corners on academic standards.</p></div></div>
+      <div class="why rv" data-idx="03"><div class="idx">03</div><div>
+        <h3>University guidance built into every year</h3>
+        <p>Subject selection, the Extended Essay, and CAS are all planned with your child&rsquo;s university ambitions in mind, from the very first term of DP1, not a rush in DP2.</p></div></div>
+      <div class="why rv" data-idx="04"><div class="idx">04</div><div>
+        <h3>A genuinely global cohort</h3>
+        <p>Students from 35+ nationalities in every live class. Critical thinking, collaboration, and global awareness, skills the IB is designed to develop, happen naturally here.</p></div></div>
+      <div class="why rv" data-idx="05"><div class="idx">05</div><div>
+        <h3>Part of Eastwood Schools, in international education since 1973</h3>
+        <p>The academic credibility and institutional rigour of a long-established school group, with a fully online model built for the world your child will graduate into.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PULL QUOTE ===== -->
+<section class="quote">
+  <div class="qmap"></div>
+  <div class="wrap rv">
+    <div class="qtext">
+      <blockquote>Education should open doors.<br>Our role is to make sure those doors are wide open.</blockquote>
+      <div class="cite">Dr. Michel A. Khoury<span>Founder, Eastwood Schools</span></div>
+    </div>
+    <figure class="qfig"><img src="MICHEL-NEW-58be23b4.png" alt="Dr. Michel A. Khoury, Founder of Eastwood Schools" width="360" height="540" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- ===== CURRICULUM ===== -->
+<section class="sec" id="curriculum">
+  <div class="wrap">
+    <div class="curhead rv">
+      <div class="shead">
+        <span class="tag eb">Eastwood Global // IB Diploma Curriculum</span>
+        <h2 class="h2">Six subject groups.<br><span class="dm">One</span> globally recognised diploma.</h2>
+      </div>
+      <p class="core-note">Every student takes six subjects, three at Higher Level, three at Standard Level, plus the three core components: Theory of Knowledge (TOK), Extended Essay (EE), and Creativity, Activity, Service (CAS).</p>
+    </div>
+    <div class="groups">
+      <details class="grp rv"><summary><span class="gt">Group 1 &mdash; Studies in Language &amp; Literature <em>HL/SL</em></span><span class="pl"></span></summary>
+        <div class="body">Arabic A &middot; English A &middot; German A &middot; Italian A &middot; Spanish A &middot; Self-taught Language (SL)</div></details>
+      <details class="grp rv"><summary><span class="gt">Group 2 &mdash; Language Acquisition <em>HL/SL</em></span><span class="pl"></span></summary>
+        <div class="body">Arabic B &middot; Arabic ab initio &middot; English B &middot; French B &middot; French ab initio &middot; German B &middot; Italian B &middot; Spanish B &middot; Spanish ab initio</div></details>
+      <details class="grp rv"><summary><span class="gt">Group 3 &mdash; Individuals &amp; Societies <em>HL/SL</em></span><span class="pl"></span></summary>
+        <div class="body">History &middot; Economics &middot; Business Management &middot; Psychology &middot; Global Politics</div></details>
+      <details class="grp rv"><summary><span class="gt">Group 4 &mdash; Sciences <em>HL/SL</em></span><span class="pl"></span></summary>
+        <div class="body">Biology &middot; Chemistry &middot; Physics &middot; Environmental Systems &amp; Societies &middot; Computer Science &middot; Sports, Exercise &amp; Health Science</div></details>
+      <details class="grp rv"><summary><span class="gt">Group 5 &mdash; Mathematics <em>HL/SL</em></span><span class="pl"></span></summary>
+        <div class="body">Mathematics: Analysis &amp; Approaches &middot; Mathematics: Applications &amp; Interpretation</div></details>
+      <details class="grp rv"><summary><span class="gt">Group 6 &mdash; Visual Arts (Optional) <em>HL/SL</em></span><span class="pl"></span></summary>
+        <div class="body">Visual Arts</div></details>
+      <details class="grp rv"><summary><span class="gt">Core Components <em>Required</em></span><span class="pl"></span></summary>
+        <div class="body">Theory of Knowledge (TOK) &middot; Extended Essay (EE) &middot; Creativity, Activity, Service (CAS)</div></details>
+    </div>
+    <p class="core-note rv" style="margin-top:28px;font-size:.86rem">Subject availability is contingent upon sufficient interest and enrolment.</p>
+    <div class="rv" style="margin-top:38px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px">
+      <p class="lede" style="margin:0;max-width:34ch">Ready to find the right subjects for your child&rsquo;s university goals?</p>
+      <a class="btn btn-p" href="https://www.eastwood.global/enquire-now-form">Book a Free Admissions Call <span class="ar">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCHEDULING ===== -->
+<section class="sec" id="scheduling" style="background:var(--white)">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="tag eb">Eastwood Global // Scheduling</span>
+      <h2 class="h2">Two timetables.<br>Every time zone.<br><span class="dm">No</span> compromise.</h2>
+      <p class="lede">Live classes are scheduled across two global windows, so students can participate fully, without sacrificing sport, family time, or sleep.</p>
+    </div>
+    <div class="wclock rv" id="wclock">
+      <div class="wc-top">
+        <div class="wc-swiss">
+          <span class="lbl">Swiss Time</span>
+          <span class="clk" id="swissClk">--:--<span class="sec">:--</span></span>
+          <span class="place">Montreux</span>
+        </div>
+        <div class="wc-status off" id="wcStatus"><span class="live"></span><span id="wcStatusText">Checking schedule&hellip;</span></div>
+        <div class="wc-toggle" role="tablist" aria-label="Cohort">
+          <button type="button" data-cohort="morning" class="on">Morning cohort</button>
+          <button type="button" data-cohort="afternoon">Afternoon cohort</button>
+        </div>
+      </div>
+      <div class="wc-map" id="wcMap">
+        <img class="wc-mapimg" src="map-web.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        <svg class="wc-arc" id="wcArc" preserveAspectRatio="none" viewBox="0 0 1700 1000"></svg>
+        <!-- markers injected by script -->
+      </div>
+      <div class="wc-foot">
+        <span>Live local times across our student body &mdash; hover any city. Every timezone, one school.</span>
+        <span><b id="wcCount">6</b> cities in the active cohort &middot; class window shaded green when a session is live.</span>
+      </div>
+    </div>
+    <div class="sched stagger">
+      <div class="scard rv" id="cardMorning"><div class="k">Morning Timetable</div><div class="t">8:00 AM &ndash; 1:30 PM</div><div class="z">Swiss Time</div>
+        <p>Designed for students in Europe, Africa, the Middle East, Asia, and Australia.</p><span class="onair-pill"><span class="live"></span> On air now</span></div>
+      <div class="scard rv" id="cardAfternoon"><div class="k">Afternoon Timetable</div><div class="t">3:00 PM &ndash; 8:30 PM</div><div class="z">Swiss Time</div>
+        <p>Designed for students in North and South America, and for students in other regions available later in the day, including athletes with morning training sessions.</p><span class="onair-pill"><span class="live"></span> On air now</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ADMISSIONS ===== -->
+<section class="sec" id="admissions">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="tag eb">Eastwood Global // Admissions</span>
+      <h2 class="h2">Simple. <span class="dm">Personal.</span><br>A decision within<br>two weeks.</h2>
+      <p class="lede">Rolling admissions with entry in Semester 1 and Semester 2. The process starts with a one-to-one conversation, not a form.</p>
+    </div>
+    <div class="steps stagger">
+      <div class="step rv"><div class="sn">1</div><h3>Book a Call</h3><p>One-to-one conversation with our admissions team.</p></div>
+      <div class="step rv"><div class="sn">2</div><h3>Apply Online</h3><p>Short, straightforward online application.</p></div>
+      <div class="step rv"><div class="sn">3</div><h3>Interview</h3><p>A conversation to understand your child&rsquo;s goals.</p></div>
+      <div class="step rv"><div class="sn">4</div><h3>Assessment</h3><p>Short academic assessment for IBDP applicants.</p></div>
+      <div class="step rv"><div class="sn">5</div><h3>Enrolled</h3><p>Decision within two weeks. Welcome to Eastwood Global.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== START HERE ===== -->
+<section class="sec start" id="start">
+  <div class="htdots" style="top:-30px;left:-30px;width:min(46vw,460px);height:340px;opacity:.55;mask-image:radial-gradient(120% 120% at 0% 0%,#000 20%,transparent 72%);-webkit-mask-image:radial-gradient(120% 120% at 0% 0%,#000 20%,transparent 72%)"></div>
+  <div class="wrap">
+    <div class="grid rv">
+      <span class="tag dk eb">Eastwood Global // Start Here</span>
+      <h2 class="h2" style="color:#fff">Book your <span class="dm">free</span><br>admissions call.</h2>
+      <p class="lede dk">Speak directly with our admissions team. We&rsquo;ll answer every question about the IB Diploma Programme, subject selection, fees, and how Eastwood Global fits your child&rsquo;s ambitions.</p>
+      <div class="contact">
+        <a href="tel:+41799625034">&#128222; +41 79 962 50 34</a>
+        <a href="mailto:admissions@eastwood.global">&#9993; admissions@eastwood.global</a>
+      </div>
+      <a class="btn btn-p btn-lg" href="https://www.eastwood.global/enquire-now-form">Book My Free Call <span class="ar">&rarr;</span></a>
+      <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-top:20px">No commitment. No pressure. Just answers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <!-- LOGO SLOT (dark bg) — official landscape lockup, reversed/white variant -->
+      <div class="logo rev">
+        <img src="Asset 2.png" alt="Eastwood Global Online School" width="188" height="62" loading="lazy" decoding="async">
+      </div>
+      <div class="fcol">
+        <h3>Get in Touch</h3>
+        <span class="fline">Montreux, Switzerland</span>
+        <a href="tel:+41799625034">+41 79 962 50 34</a>
+        <a href="mailto:admissions@eastwood.global">admissions@eastwood.global</a>
+      </div>
+      <nav class="fcol" aria-label="Footer">
+        <h3>Explore</h3>
+        <a href="https://www.eastwood.global">eastwood.global</a>
+        <a href="https://www.instagram.com/eastwoodglobal/">@eastwoodglobal</a>
+        <a href="https://www.eastwood.global/privacy-policy">Privacy Policy</a>
+      </nav>
+      <a class="btn btn-p fenq" href="https://www.eastwood.global/enquire-now-form">Enquire Now <span class="ar">&rarr;</span></a>
+    </div>
+    <div class="fmeta">
+      <div>&copy; 2026 Eastwood Schools. All rights reserved.</div>
+      <div>The IB Diploma Programme is authorised by the International Baccalaureate Organization.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+const heroEl=document.querySelector('.hero');
+function onHdr(){const h=heroEl?heroEl.offsetHeight-150:120;hdr.classList.toggle('scr',scrollY>h);}
+addEventListener('scroll',onHdr,{passive:true});onHdr();
+// scroll progress bar
+const _pg=document.getElementById('progress');
+function onProg(){const sc=document.documentElement.scrollHeight-innerHeight;const p=sc>0?Math.min(1,scrollY/sc):0;_pg.style.transform='scaleX('+p+')';}
+addEventListener('scroll',onProg,{passive:true});addEventListener('resize',onProg,{passive:true});onProg();
+// staggered hero load
+addEventListener('load',()=>{document.querySelectorAll('.hero .rv').forEach((el,i)=>setTimeout(()=>el.classList.add('in'),120+i*110))});
+// scroll reveals — observer + scroll-sweep fallback so nothing stays hidden
+const els=[...document.querySelectorAll('.rv')].filter(el=>!el.closest('.hero'));
+const reveal=el=>el.classList.add('in');
+let pending=els.slice();
+function sweep(){pending=pending.filter(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight*0.94&&r.bottom>0){reveal(el);return false;}return true;});}
+if('IntersectionObserver'in window){
+  const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){reveal(x.target);io.unobserve(x.target);pending=pending.filter(p=>p!==x.target)}})},{threshold:0,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(reveal)}
+addEventListener('scroll',sweep,{passive:true});
+addEventListener('resize',sweep,{passive:true});
+addEventListener('load',sweep);
+sweep();
+
+// quiet count-up + band reveal — respects reduced motion
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function countEl(el){
+    const to=+el.dataset.to, dec=+(el.dataset.dec||0);
+    if(reduce){el.textContent=to.toFixed(dec);return;}
+    const dur=1200, t0=performance.now();
+    (function tick(now){
+      const p=Math.min(1,(now-t0)/dur);
+      const e=1-Math.pow(1-p,3); // easeOutCubic
+      el.textContent=(e*to).toFixed(dec);
+      if(p<1)requestAnimationFrame(tick);
+    })(t0);
+  }
+  function activate(band){
+    band.classList.add('lit');
+    band.querySelectorAll('.ct').forEach(countEl);
+  }
+  const bands=['trust','numbers'].map(id=>document.getElementById(id)).filter(Boolean);
+  if('IntersectionObserver'in window){
+    const o=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){activate(x.target);o.unobserve(x.target)}})},{threshold:.3});
+    bands.forEach(b=>o.observe(b));
+  }else{bands.forEach(activate)}
+})();
+
+// ===== interactive world-clock map =====
+(function(){
+  const map=document.getElementById('wcMap'); if(!map) return;
+  // x,y are % positions on the dotted map image (equirectangular-ish, calibrated)
+  const CITIES=[
+    // ----- Afternoon cohort (Americas) -----
+    {city:'Honolulu',    tz:'Pacific/Honolulu',            cohort:'afternoon', x:10.2, y:44.5},
+    {city:'Anchorage',   tz:'America/Anchorage',           cohort:'afternoon', x:12.2, y:16.4},
+    {city:'Los Angeles', tz:'America/Los_Angeles',         cohort:'afternoon', x:20.1, y:35.6},
+    {city:'Mexico City', tz:'America/Mexico_City',         cohort:'afternoon', x:24.9, y:45.8},
+    {city:'New York',    tz:'America/New_York',            cohort:'afternoon', x:31.1, y:30.9},
+    {city:'São Paulo',   tz:'America/Sao_Paulo',           cohort:'afternoon', x:38.0, y:76.0},
+    {city:'Buenos Aires',tz:'America/Argentina/Buenos_Aires',cohort:'afternoon',x:35.0, y:83.8},
+    // ----- Anchor -----
+    {city:'Montreux',    tz:'Europe/Zurich',               cohort:'hub',       x:51.2, y:26.8},
+    // ----- Morning cohort (EMEA · Asia · Oceania) -----
+    {city:'London',      tz:'Europe/London',               cohort:'morning',   x:49.6, y:23.3},
+    {city:'Lagos',       tz:'Africa/Lagos',                cohort:'morning',   x:50.4, y:54.9},
+    {city:'Johannesburg',tz:'Africa/Johannesburg',         cohort:'morning',   x:56.6, y:77.9},
+    {city:'Nairobi',     tz:'Africa/Nairobi',              cohort:'morning',   x:58.8, y:60.4},
+    {city:'Moscow',      tz:'Europe/Moscow',               cohort:'morning',   x:59.0, y:20.2},
+    {city:'Dubai',       tz:'Asia/Dubai',                  cohort:'morning',   x:63.4, y:41.8},
+    {city:'Mumbai',      tz:'Asia/Kolkata',                cohort:'morning',   x:67.8, y:46.1},
+    {city:'Dhaka',       tz:'Asia/Dhaka',                  cohort:'morning',   x:72.2, y:42.7},
+    {city:'Bangkok',     tz:'Asia/Bangkok',                cohort:'morning',   x:74.7, y:49.9},
+    {city:'Singapore',   tz:'Asia/Singapore',              cohort:'morning',   x:75.5, y:58.5},
+    {city:'Beijing',     tz:'Asia/Shanghai',               cohort:'morning',   x:78.6, y:31.4},
+    {city:'Tokyo',       tz:'Asia/Tokyo',                  cohort:'morning',   x:84.5, y:34.4},
+    {city:'Sydney',      tz:'Australia/Sydney',            cohort:'morning',   x:87.3, y:83.3},
+    {city:'Auckland',    tz:'Pacific/Auckland',            cohort:'morning',   x:93.2, y:85.5}
+  ];
+  const hub=CITIES.find(c=>c.cohort==='hub');
+  const arc=document.getElementById('wcArc');
+  const markers=[];
+  CITIES.forEach(c=>{
+    const el=document.createElement('div');
+    el.className='mk'+(c.cohort==='hub'?' hub':'');
+    el.style.left=c.x+'%'; el.style.top=c.y+'%';
+    el.innerHTML='<div class="chip"><span class="city">'+c.city+'</span><span class="time">--:--</span></div><div class="dot"></div>';
+    map.appendChild(el);
+    c.el=el; c.timeEl=el.querySelector('.time'); markers.push(c);
+    // arc from hub
+    if(c!==hub){
+      const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      const hx=hub.x*17, hy=hub.y*10, cx=c.x*17, cy=c.y*10;
+      const mx=(hx+cx)/2, my=Math.min(hy,cy)-Math.abs(hx-cx)*0.16-30;
+      p.setAttribute('d','M '+hx+' '+hy+' Q '+mx+' '+my+' '+cx+' '+cy);
+      p.dataset.cohort=c.cohort; arc.appendChild(p); c.arc=p;
+    }
+  });
+
+  const fmt=tz=>new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false});
+  const fmtS=tz=>new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+  // minutes-of-day in Zurich
+  function zurichMinutes(){
+    const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    const h=+parts.find(p=>p.type==='hour').value, m=+parts.find(p=>p.type==='minute').value;
+    return h*60+m;
+  }
+  const MORNING=[8*60, 13*60+30], AFTERNOON=[15*60, 20*60+30];
+  const swissClk=document.getElementById('swissClk');
+  const statusEl=document.getElementById('wcStatus');
+  const statusTxt=document.getElementById('wcStatusText');
+  const cardM=document.getElementById('cardMorning'), cardA=document.getElementById('cardAfternoon');
+  const countEl=document.getElementById('wcCount');
+  let cohort='morning';
+
+  function fmtWindow(min){const h=Math.floor(min/60),m=min%60;const ap=h<12?'AM':'PM';let hh=h%12;if(hh===0)hh=12;return hh+':'+String(m).padStart(2,'0')+' '+ap;}
+  function nextInfo(now){
+    // returns {live:'morning'|'afternoon'|null, text}
+    if(now>=MORNING[0]&&now<MORNING[1]) return {live:'morning',text:'Morning session live now'};
+    if(now>=AFTERNOON[0]&&now<AFTERNOON[1]) return {live:'afternoon',text:'Afternoon session live now'};
+    let starts=[[MORNING[0],'Morning'],[AFTERNOON[0],'Afternoon']].map(([mn,lab])=>{let d=mn-now;if(d<0)d+=1440;return [d,lab,mn];}).sort((a,b)=>a[0]-b[0]);
+    const [d,lab]=starts[0];const h=Math.floor(d/60),m=d%60;
+    return {live:null,text:lab+' session starts in '+(h?h+'h ':'')+m+'m'};
+  }
+  function tick(){
+    const sp=fmtS('Europe/Zurich').formatToParts(new Date());
+    const h=sp.find(p=>p.type==='hour').value,m=sp.find(p=>p.type==='minute').value,s=sp.find(p=>p.type==='second').value;
+    swissClk.innerHTML=h+':'+m+'<span class="sec">:'+s+'</span>';
+    markers.forEach(c=>{ c.timeEl.textContent=fmt(c.tz).format(new Date()); });
+    const now=zurichMinutes();
+    const info=nextInfo(now);
+    statusTxt.textContent=info.text;
+    statusEl.classList.toggle('off',!info.live);
+    cardM.classList.toggle('onair',info.live==='morning');
+    cardA.classList.toggle('onair',info.live==='afternoon');
+  }
+
+  function applyCohort(){
+    countEl.textContent=CITIES.filter(c=>c.cohort===cohort).length;
+    markers.forEach(c=>{
+      const on=(c.cohort===cohort)||c.cohort==='hub';
+      c.el.classList.toggle('active',on&&c.cohort!=='hub');
+      c.el.classList.toggle('dim',!on);
+      if(c.arc){c.arc.classList.toggle('show',c.cohort===cohort);}
+    });
+  }
+  document.querySelectorAll('.wc-toggle button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.wc-toggle button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on'); cohort=b.dataset.cohort; applyCohort();
+    });
+  });
+  // default cohort = whichever is live, else morning
+  const liveNow=nextInfo(zurichMinutes()).live;
+  if(liveNow){cohort=liveNow;document.querySelectorAll('.wc-toggle button').forEach(x=>x.classList.toggle('on',x.dataset.cohort===liveNow));}
+  document.getElementById('wclock').classList.add('ready');
+  applyCohort(); tick(); setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
