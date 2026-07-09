@@ -139,7 +139,7 @@ header.scr{border-bottom-color:rgba(255,255,255,.14);background:rgba(0,0,119,.9)
 
 /* trust bar — premium proof strip, animated */
 .trust{background:var(--white);border-top:2px solid var(--green);border-bottom:1px solid var(--line);overflow:hidden}
-.trust .wrap{display:grid;grid-template-columns:repeat(5,1fr);padding-inline:0}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-inline:0}
 .tcell{position:relative;padding:clamp(42px,4.2vw,66px) clamp(16px,1.8vw,30px);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;text-align:center;
   min-height:clamp(168px,18vw,224px)}
@@ -237,8 +237,12 @@ header.scr{border-bottom-color:rgba(255,255,255,.14);background:rgba(0,0,119,.9)
   border-top:1px solid rgba(255,255,255,.16);border-left:1px solid rgba(255,255,255,.16);
   border-radius:0;overflow:hidden;margin-top:40px}
 .nc{border-right:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16);
-  padding:clamp(32px,3.8vw,54px);transition:background .3s}
-.nc:hover{background:rgba(255,255,255,.03)}
+  padding:clamp(32px,3.8vw,54px);position:relative;overflow:hidden;
+  transition:background .4s var(--ease),transform .55s var(--ease),box-shadow .55s var(--ease)}
+.nc:hover{background:rgba(255,255,255,.045);transform:translateY(-5px);z-index:2;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.nc .n{transition:transform .55s var(--ease);transform-origin:left center}
+.nc:hover .n{transform:scale(1.04)}
+.nc.wide{grid-column:span 2}
 .nc .n{font-size:clamp(2.9rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.05em;line-height:.9;color:var(--green);font-variant-numeric:tabular-nums}
 .nc .n .s{font-size:.42em;font-weight:800;color:#fff;letter-spacing:-.02em}
 .nc .lab{font-size:1.04rem;font-weight:700;color:#fff;margin-top:20px;letter-spacing:-.012em}
@@ -250,6 +254,13 @@ header.scr{border-bottom-color:rgba(255,255,255,.14);background:rgba(0,0,119,.9)
 .nc.anchor .n .s{color:var(--deep)}
 .nc.anchor .lab{color:var(--deep)}
 .nc.anchor .sub{color:rgba(0,0,80,.66)}
+/* premium light-sweep across the flagship cell */
+.nc.anchor::after{content:"";position:absolute;top:0;left:-70%;width:55%;height:100%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg)}
+#numbers.lit .nc.anchor::after{animation:sheen 1.5s var(--ease) .6s both}
+.nc.anchor:hover::after{animation:sheen 1.1s var(--ease) both}
+@keyframes sheen{from{left:-70%}to{left:150%}}
+@media (prefers-reduced-motion:reduce){.nc.anchor::after{display:none}}
 .num-cta{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:38px}
 .num-cta p{color:rgba(255,255,255,.82);font-size:1.08rem}
 
@@ -537,6 +548,7 @@ footer .wrap{padding-block:clamp(56px,6vw,88px)}
   body{font-size:16px}
   .hstats{grid-template-columns:1fr 1fr;gap:26px 40px}
   .ngrid{grid-template-columns:1fr}
+  .nc.wide{grid-column:auto}
   .steps{grid-template-columns:1fr}
   .why{grid-template-columns:1fr;gap:8px}
   .nav .btn .tx{display:none}
@@ -587,9 +599,10 @@ footer .wrap{padding-block:clamp(56px,6vw,88px)}
     <p class="lede dk rv">Eastwood Global is one of only 7 schools allowed by the IBO to deliver the full IB Diploma online. Live, teacher-led, and built around your child&rsquo;s ambition.</p>
     <div class="hero-cta rv">
       <a class="btn btn-p btn-lg" href="https://www.eastwood.global/enquire-now-form">Book an Admissions Call <span class="ar">&rarr;</span></a>
+      <a class="btn btn-o btn-lg dk" href="https://api.whatsapp.com/send/?phone=41799625034&amp;text=Hi+Eastwood+Global%2C+I%27d+like+to+learn+more+about+admissions.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" style="flex:0 0 auto"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.87L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg> WhatsApp Us</a>
     </div>
     <div class="hstats rv">
-      <div class="hstat"><div class="n">38.9</div><div class="l">Avg IB Score</div></div>
+      <div class="hstat"><div class="n">37</div><div class="l">Avg IB Score</div></div>
       <div class="hstat"><div class="n">100%</div><div class="l">Pass Rate</div></div>
       <div class="hstat"><div class="n">35+</div><div class="l">Countries</div></div>
     </div>
@@ -616,8 +629,7 @@ footer .wrap{padding-block:clamp(56px,6vw,88px)}
   <div class="wrap">
     <div class="tcell"><span class="big">IBO</span><span class="lab">Allowed School</span></div>
     <div class="tcell"><span class="kick">Students from</span><span class="big"><span class="ct" data-to="35">35</span><span class="u">+</span></span><span class="lab">Countries</span></div>
-    <div class="tcell"><span class="big"><span class="ct" data-to="113">113</span></span><span class="lab">Diplomas Awarded</span></div>
-    <div class="tcell"><span class="kick">Perfect Scores of</span><span class="big"><span class="ct" data-to="45">45</span><span class="u">/45</span></span></div>
+    <div class="tcell"><span class="kick">Genuinely personal</span><span class="big">1<span class="u">:12</span></span><span class="lab">Class Ratio</span></div>
     <div class="tcell"><span class="kick">Anchored in</span><span class="big word">Montreux,</span><span class="lab">Switzerland</span></div>
   </div>
 </div>
@@ -663,10 +675,9 @@ footer .wrap{padding-block:clamp(56px,6vw,88px)}
     <div class="ngrid stagger">
       <div class="nc rv"><div class="n"><span class="ct" data-to="37">37</span></div><div class="lab">Average IB Score</div><div class="sub">Global avg: 30.88</div></div>
       <div class="nc rv"><div class="n"><span class="ct" data-to="100">100</span><span class="s">%</span></div><div class="lab">Diploma Success Rate</div><div class="sub">Every student, every year</div></div>
-      <div class="nc rv"><div class="n"><span class="ct" data-to="45">45</span><span class="s">/45</span></div><div class="lab">Perfect IB Scores</div><div class="sub">Multiple students achieved</div></div>
-      <div class="nc anchor rv"><div class="n">1<span class="s"> of 7</span></div><div class="lab">Schools Worldwide</div><div class="sub">Allowed for IB Diploma online</div></div>
-      <div class="nc rv"><div class="n"><span class="ct" data-to="113">113</span></div><div class="lab">Diplomas Awarded</div><div class="sub">113 of 113, every candidate</div></div>
+      <div class="nc rv"><div class="n"><span class="ct" data-to="50">50</span><span class="s">+</span></div><div class="lab">Years of Heritage</div><div class="sub">Educating since 1975</div></div>
       <div class="nc rv"><div class="n"><span class="ct" data-to="35">35</span><span class="s">+</span></div><div class="lab">Nationalities</div><div class="sub">In our student body</div></div>
+      <div class="nc anchor wide rv"><div class="n">1<span class="s"> of 7</span></div><div class="lab">Schools Worldwide</div><div class="sub">Allowed by the IBO to deliver the IB Diploma online</div></div>
     </div>
     <div class="num-cta rv">
       <p>Speak with our admissions team. No commitment, just answers.</p>
@@ -696,10 +707,10 @@ footer .wrap{padding-block:clamp(56px,6vw,88px)}
         <h3>Every class is live</h3>
         <p>Every teacher is an expert IB educator. No pre-recorded lectures. Students engage in deep, meaningful learning through dynamic discussions, immediate feedback, and interactive group work in real time.</p></div></div>
       <div class="why rv" data-idx="02"><div class="idx">02</div><div>
-        <h3>Flexibility without compromising rigour</h3>
+        <h3>Flexibility without<br>compromising rigour</h3>
         <p>Morning and afternoon Swiss timetables accommodate students across Europe, the Middle East, Asia, and beyond, without ever cutting corners on academic standards.</p></div></div>
       <div class="why rv" data-idx="03"><div class="idx">03</div><div>
-        <h3>University guidance built into every year</h3>
+        <h3>University guidance built<br>into every year</h3>
         <p>Subject selection, the Extended Essay, and CAS are all planned with your child&rsquo;s university ambitions in mind, from the very first term of DP1, not a rush in DP2.</p></div></div>
       <div class="why rv" data-idx="04"><div class="idx">04</div><div>
         <h3>A genuinely global cohort</h3>
@@ -828,6 +839,7 @@ footer .wrap{padding-block:clamp(56px,6vw,88px)}
         <a href="mailto:admissions@eastwood.global">&#9993; admissions@eastwood.global</a>
       </div>
       <a class="btn btn-p btn-lg" href="https://www.eastwood.global/enquire-now-form">Book My Call <span class="ar">&rarr;</span></a>
+      <a class="btn btn-o btn-lg dk" href="https://api.whatsapp.com/send/?phone=41799625034&amp;text=Hi+Eastwood+Global%2C+I%27d+like+to+learn+more+about+admissions.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener" style="margin-left:12px"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" style="flex:0 0 auto"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.87L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg> WhatsApp Us</a>
       <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-top:20px">No commitment. No pressure. Just answers.</p>
     </div>
   </div>
