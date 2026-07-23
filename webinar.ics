@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Eastwood Global//Webinar//EN
+BEGIN:VEVENT
+UID:eg-webinar-20260802@eastwood.global
+DTSTAMP:20260723T180000Z
+DTSTART:20260802T170000Z
+DTEND:20260802T180000Z
+SUMMARY:Eastwood Global Webinar: What Top Universities Really Look For
+DESCRIPTION:Your joining link will be emailed before the session. Full details: https://monicakeis.github.io/eg-landing-live/thank-you.html
+LOCATION:Online
+URL:https://monicakeis.github.io/eg-landing-live/thank-you.html
+END:VEVENT
+END:VCALENDAR
