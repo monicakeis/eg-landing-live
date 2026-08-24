@@ -21,14 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:eg-webinar-2026-08-23@eastwood.global
+UID:eg-webinar-2026-08-30@eastwood.global
 DTSTAMP:20260814T100000Z
-DTSTART;TZID=Europe/Zurich:20260823T190000
-DTEND;TZID=Europe/Zurich:20260823T200000
+DTSTART;TZID=Europe/Zurich:20260830T190000
+DTEND;TZID=Europe/Zurich:20260830T200000
 SUMMARY:Eastwood Global Webinar: What Top Universities Really Look For
 DESCRIPTION:What Top Universities Really Look For\, and how the IB builds i
  t before Grade 11.\n\nSpeaker: Dr. Michel A. Khoury\, Founder\, Eastwood Sc
- hools.\n\nWHEN: Sunday\, 23 August 2026\, 6:00 PM UK / 7:00 PM CET\n\nWHERE
+ hools.\n\nWHEN: Sunday\, 30 August 2026\, 7:00 PM CET\n\nWHERE
  : Online\, on Zoom. Your join link is in the confirmation email.\n\nQuestio
  ns: admissions@eastwood.global
 LOCATION:Online
