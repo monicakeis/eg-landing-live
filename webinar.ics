@@ -21,14 +21,15 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:eg-webinar-2026-08-30@eastwood.global
+UID:eg-webinar-2026-10-11@eastwood.global
 DTSTAMP:20260814T100000Z
-DTSTART;TZID=Europe/Zurich:20260830T190000
-DTEND;TZID=Europe/Zurich:20260830T200000
-SUMMARY:Eastwood Global Webinar: What Top Universities Really Look For
-DESCRIPTION:What Top Universities Really Look For\, and how the IB builds i
- t before Grade 11.\n\nSpeaker: Dr. Michel A. Khoury\, Founder\, Eastwood Sc
- hools.\n\nWHEN: Sunday\, 30 August 2026\, 7:00 PM CET\n\nWHERE
+DTSTART;TZID=Europe/Zurich:20261011T190000
+DTEND;TZID=Europe/Zurich:20261011T200000
+SUMMARY:Eastwood Global Webinar: Why your child's current school is holding them back
+DESCRIPTION:Why your child's current school is holding them back from
+ their dream university\, and what Eastwood Global does differently.\n\n
+ Speaker: Dr. Michel A. Khoury\, Founder\, Eastwood Sc
+ hools.\n\nWHEN: Sunday\, 11 October 2026\, 19:00 CET · 18:00 UK\n\nWHERE
  : Online\, on Zoom. Your join link is in the confirmation email.\n\nQuestio
  ns: admissions@eastwood.global
 LOCATION:Online
